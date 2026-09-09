@@ -1,0 +1,7 @@
+#Multi line string to print the statement
+
+welcome='''Welcome to Inceptez Technologies!\n
+Python Training: Basics\n
+Enjoy your learning journey.'''
+
+print(welcome)
