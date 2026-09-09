@@ -1,0 +1,33 @@
+#Dynamic Inference,Dynamic Typing,Strong typing
+
+'''***Dynamic Inference
+Without explicit declaration as int or float the vars fee,
+baseFee initialized as int
+and gst initialized as float data type when assigned the respective values'''
+
+fee=baseFee=45000
+gst=.18
+#print(f"Base Fee:Rs.",baseFee,"Type:",type(baseFee))
+print(f"Fee:Rs.",fee,"Type:",type(fee),"\n")
+
+'''***Dynamic Typing
+While an Int type variable is operated with float,
+and the same int type varibale is 
+reassigned with float value,int data type variable automatically 
+inherits the float data type'''
+
+fee=fee*gst
+print(f"Fee after dynamic Typing:Rs.",fee,"Type:",type(fee),"\n")
+totalFeeswithGST=baseFee+fee
+
+print(f"Total fees with GST:Rs.",totalFeeswithGST,"Type:",type(totalFeeswithGST),"\n")
+
+'''***Strong typing
+When an int data type is trying to operate with string type error occurs
+which indicates python is a strong typing language'''
+try:
+    error="Try to add this string with totalFees"+totalFeeswithGST
+except Exception as err:
+    print(f"General Exception caught when try to print result-> {err}")
+finally:
+    print("End of the program")
