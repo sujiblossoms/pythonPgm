@@ -1,3 +1,5 @@
+#****Variable usage and Naming conventions
+
 #Variable usage
 
 studentName='Arun'
@@ -5,3 +7,24 @@ courseName='Python Fundamentals'
 trainingInstName='Inceptez Technologies'
 
 print("Name:",studentName,"is learning the course",courseName,"at the institute",trainingInstName)
+
+# Variable Naming Convention
+
+'''
+Invalid variable name below
+2student = 'Ravi'
+class name = 'Python'
+'''
+
+_student_id = 1001
+studentName = 'Priya'
+inceptez_batch = 'Morning'
+
+#Declare 3 variables following naming styles for Inceptez projects:
+
+PascalCase= 'DataEngineeringBatch'
+camelCase='dataEngineeringBatch'
+snake_case='data_engineering_batch'
+
+print("Valid variables:\n",_student_id,studentName,inceptez_batch)
+print('\nPascalCase:',PascalCase,'\ncamelCase:',camelCase,'\nsnake_case:',snake_case)
