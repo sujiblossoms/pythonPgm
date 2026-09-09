@@ -1,0 +1,11 @@
+#Method1 using single quotes
+firstString='This is Inceptez\'s "Python" class for Data Engineers & AI Engineers'
+print(firstString)
+
+#Method2 using double quotes
+secondString="This is Inceptez's \"Python\" class for Data Engineers & AI Engineers"
+print(secondString)
+
+#Method3 using triple quotes
+thirdString='''This is Inceptez's "Python" class for Data Engineers & AI Engineers'''
+print(thirdString)
