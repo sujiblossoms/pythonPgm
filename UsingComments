@@ -1,0 +1,12 @@
+#Total number of aspirants/students attending the session
+students = 100
+
+#Number of trainers in the session
+trainers = 2
+
+#Sum of the students and trainers in the current session
+total = students + trainers
+
+'''Displaying the total number of aspirants and trainers 
+for the current session'''
+print("Number of persons in the session",total)
