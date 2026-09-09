@@ -1,0 +1,5 @@
+#Make the below piece of code as dead code
+#print("Welcome to Inceptez Python Learning")
+
+#Reactivate the above dead code
+print("Welcome to Inceptez Python Learning")
