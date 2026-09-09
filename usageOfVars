@@ -1,0 +1,7 @@
+#Variable usage
+
+studentName='Arun'
+courseName='Python Fundamentals'
+trainingInstName='Inceptez Technologies'
+
+print("Name:",studentName,"is learning the course",courseName,"at the institute",trainingInstName)
