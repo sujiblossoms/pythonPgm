@@ -13,7 +13,7 @@ You will retire in 20 years at Inceptez Technologies.
 from sqlite3.dbapi2 import Date
 
 EmpAge=input("Enter Emp Age:")
-if(isinstance(EmpAge,str)):
+if(isinstance(EmpAge,str) and EmpAge.isnumeric()):
     EmpAge=int(EmpAge)
     print("Emp Age is",EmpAge)
     print("You will retire after",60-EmpAge,"years from",Date.today(),
