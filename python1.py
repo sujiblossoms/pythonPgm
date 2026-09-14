@@ -115,3 +115,94 @@ quantity = float(input("Enter quantity: "))
 total_cost = price * quantity
 print("You purchased " , quantity , " units of " , item_name)
 print("Total payable: " , total_cost,"INR")
+
+#Pgm for Internet usage calculation
+dataLimit=float(input("Total monthly data limit (in GB)"))
+dataUsed=float(input("Data used so far (in GB)"))
+RemainingData = dataLimit - dataUsed
+UsagePercentage = (dataUsed / dataLimit) * 100
+print("Remaining data:",RemainingData)
+print("Usage percentage:",UsagePercentage,round(UsagePercentage,2))
+if(UsagePercentage >=80):
+    print("Warning: High usage, consider upgrading your plan.")
+
+#Pgm to plan on travel based on expense
+continueRun='y'
+while(continueRun=='y'):
+    valletAmount=int(input("Enter the vallet amount"))
+    FlightTicketPrice=int(input("Enter the flight ticket price"))
+    TrainTicketPrice=int(input("Enter the train ticktet price"))
+    BusFare=int(input("Enter the bus fare"))
+    if(valletAmount >= FlightTicketPrice):
+        print("Choose the flight")
+    elif(valletAmount >= TrainTicketPrice):
+        print("Choose the train")
+    elif(valletAmount >= BusFare):
+        print("Choose the bus")
+    else:
+        print("No more travel,Rest at home")
+    continueRun=input("Do you want to continue?(y/n)")
+
+#Pgm for shop discount calculation
+price=float(input("Enter the price:"))
+discount=int(input("Enter the % of discount:"))
+discountAmount = (price * discount) / 100
+finalPrice = price - discountAmount
+print(f"Original price:Rs.{price}\nDiscount given:Rs.{discountAmount}\nFinal amount to be paid:Rs.{round(finalPrice)}")
+
+#Pgm for voting eligibility
+age = int(input("Enter age: "))
+citizen = input("Are you an Indian citizen? (yes/no)")
+if age >= 18 and citizen == "yes":
+    print("Eligible to vote")
+else:
+    print("Not eligible")
+
+#Pgm for bank account eligibility
+continueRun='y'
+while(continueRun=='y'):
+    age=int(input("Enter your age:"))
+    if age < 18:
+        print("Not eligible for a bank account.")
+    elif age >= 18:
+        monthlyIncome = int(input("Enter your monthly income:"))
+        if monthlyIncome < 15000:
+            print("Eligible for basic savings account.")
+        elif monthlyIncome >= 15000 and monthlyIncome <= 50000:
+            print("Eligible for savings + salary account.")
+        else:
+            print("Eligible for premium account.")
+    continueRun=input("Do you need to continue testing?y/n:")
+
+#Pgm to chk on availability of room in hotel with facilities
+from datetime import date
+continueRun='y'
+while continueRun=='y':
+    roomAvail=input("Enter room availability?y/n:")
+    if roomAvail=="y":
+        guest=input("VIP guest?y/n:")
+        if guest=="y":
+            print("Eligible for complementary upgrade")
+        else:
+            membership=int(input("Membership from "))
+            currentYear = date.today().year
+            years=currentYear-membership
+            if years > 5:
+                print("Eligible for discount")
+            else:
+                print("Only standard price")
+    else:
+        print("Sorry!No rooms available")
+    continueRun=input("Continue?y/n")
+
+#Prgm to find fever based on body temperature
+continueRun='y'
+while continueRun=='y':
+    temp = float(input("Enter body temperature in Celsius: "))
+    if temp < 37:
+        print("Normal temperature")
+    elif temp >= 37 and temp < 39:
+        print("Fever")
+    else:
+        print("High fever")
+    continueRun = input("Continue?y/n")
