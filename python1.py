@@ -126,7 +126,7 @@ print("Usage percentage:",UsagePercentage,round(UsagePercentage,2))
 if(UsagePercentage >=80):
     print("Warning: High usage, consider upgrading your plan.")
 
-#Pgm to plan on travel based on expense
+#Pgm to plan on travel based on comfort
 continueRun='y'
 while(continueRun=='y'):
     valletAmount=int(input("Enter the vallet amount"))
@@ -142,6 +142,25 @@ while(continueRun=='y'):
     else:
         print("No more travel,Rest at home")
     continueRun=input("Do you want to continue?(y/n)")
+
+#Pgm to plan on travel based on cheapest mode of transport
+continueRun='y'
+while(continueRun=='y'):
+    valletAmount=int(input("Enter the vallet amount"))
+    FlightTicketPrice=int(input("Enter the flight ticket price"))
+    TrainTicketPrice=int(input("Enter the train ticktet price"))
+    BusFare=int(input("Enter the bus fare"))
+    if valletAmount >= FlightTicketPrice or valletAmount >= TrainTicketPrice or valletAmount >= BusFare:
+        print("Travel possible")
+        if FlightTicketPrice <= TrainTicketPrice and FlightTicketPrice <= BusFare:
+            print("Choose the flight")
+        elif TrainTicketPrice <= BusFare:
+            print("Choose the Train")
+        else:
+            print("Choose the bus")
+    else:
+        print("Travel not possible")
+    continueRun = input("Do you want to continue?(y/n)")
 
 #Pgm for shop discount calculation
 price=float(input("Enter the price:"))
