@@ -129,15 +129,15 @@ if(UsagePercentage >=80):
 #Pgm to plan on travel based on comfort
 continueRun='y'
 while(continueRun=='y'):
-    valletAmount=int(input("Enter the vallet amount"))
-    FlightTicketPrice=int(input("Enter the flight ticket price"))
-    TrainTicketPrice=int(input("Enter the train ticktet price"))
+    walletAmount=int(input("Enter the wallet amount"))
+    FlightTicketPrice=int(input("Enter the flight fare"))
+    TrainTicketPrice=int(input("Enter the train fare"))
     BusFare=int(input("Enter the bus fare"))
-    if(valletAmount >= FlightTicketPrice):
+    if(walletAmount >= FlightTicketPrice):
         print("Choose the flight")
-    elif(valletAmount >= TrainTicketPrice):
+    elif(walletAmount >= TrainTicketPrice):
         print("Choose the train")
-    elif(valletAmount >= BusFare):
+    elif(walletAmount >= BusFare):
         print("Choose the bus")
     else:
         print("No more travel,Rest at home")
@@ -146,12 +146,12 @@ while(continueRun=='y'):
 #Pgm to plan on travel based on cheapest mode of transport
 continueRun='y'
 while(continueRun=='y'):
-    valletAmount=int(input("Enter the vallet amount"))
-    FlightTicketPrice=int(input("Enter the flight ticket price"))
-    TrainTicketPrice=int(input("Enter the train ticktet price"))
+    walletAmount=int(input("Enter the wallet amount"))
+    FlightTicketPrice=int(input("Enter the flight fare"))
+    TrainTicketPrice=int(input("Enter the train fare"))
     BusFare=int(input("Enter the bus fare"))
-    if valletAmount >= FlightTicketPrice or valletAmount >= TrainTicketPrice or valletAmount >= BusFare:
-        print("Travel possible")
+    if walletAmount >= FlightTicketPrice or walletAmount >= TrainTicketPrice or walletAmount >= BusFare:
+        #print("Travel possible")
         if FlightTicketPrice <= TrainTicketPrice and FlightTicketPrice <= BusFare:
             print("Choose the flight")
         elif TrainTicketPrice <= BusFare:
@@ -159,7 +159,7 @@ while(continueRun=='y'):
         else:
             print("Choose the bus")
     else:
-        print("Travel not possible")
+        print("Travel not possible due to insufficient fund")
     continueRun = input("Do you want to continue?(y/n)")
 
 #Pgm for shop discount calculation
