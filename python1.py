@@ -225,3 +225,83 @@ while continueRun=='y':
     else:
         print("High fever")
     continueRun = input("Continue?y/n")
+
+#Pgm to find the food discount
+continueRun='y'
+minCartValue,maxDis=600,100
+while(continueRun=='y'):
+    cart=float(input("Enter the cart value:"))
+    if(cart >= minCartValue):
+        dis=(cart*10)/100
+        if(dis > maxDis):
+            print("Max discount reached,so giving flat discount")
+            finalPrice=cart-maxDis
+        else:
+            finalPrice=cart-dis
+        print("The final price after discount:Rs.",finalPrice)
+    else:
+        print("kindly purchase items for another Rs.",(minCartValue-cart),"to meet the cart value")
+    continueRun = input("Do you want to continue?(y/n)")
+
+#Pgm for multiplication tables
+continueRun='y'
+while(continueRun=='y'):
+    tables=int(input("Enter the table number:"))
+    for i in range(1,11):
+        print(f"{i}*{tables}={i*tables}")
+    continueRun = input("Do you want to continue?(y/n)")
+
+#Pgm for sum of the numbers,oddNumbers,evenNumbers
+continueRun='y'
+while(continueRun=='y'):
+    sums = sumOdd = sumEven = 0
+    num=int(input("Enter the number:"))
+    list1=[];
+    for i in range(1,num+1):
+        sums=sums+i
+        list1.append(i)
+    else:
+        print(list1)
+    for i in range(0,num+1,2):
+        sumEven+=i
+    for i in range(1,num+1,2):
+        sumOdd+=i
+    print(f"sum of numbers={sums}")
+    print(f"sum of even numbers={sumEven}")
+    print(f"sum of odd numbers={sumOdd}")
+    continueRun = input("Do you want to continue?(y/n)")
+
+#Prg to print numbers in loop
+i = 1
+while i <= 10:
+    print(i)
+    i+=1
+    
+#Prg to print the items
+items = ["Pen", "Book", "Mouse", "Keyboard"]
+i = 0
+while i < len(items):#or while i <= len(items)-1:
+    print(items[i])
+    i = i + 1
+    
+#Prg to find the items in dictionary
+vegs = {"onion":"35","tomato":"20","carrot":"25","beans":"30","cabbage":"15"}
+vegName=input("Enter the veg name:")
+if vegName in vegs:
+    print(f"Price of {vegName} =Rs.{vegs.get(vegName)}")
+else:
+    print("Item not available")
+
+#Prg to add and display the list and set items
+list1=list()#or list1=[] both ways list can be declared
+while True:
+    cityName=str(input("Enter city name(exit to end):"))
+    if(cityName == 'exit'):
+        break
+    else:
+        list1.append(cityName)
+
+set1=set(list1)
+print(f"list is:{list1}")
+print(f"set is:{set1}")
+
